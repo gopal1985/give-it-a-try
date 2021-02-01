@@ -2,21 +2,28 @@ import React from 'react';
 
 class StaticContent extends React.Component{
 
-    constructor(props){
-        super(props);
-        this.handleImgClick = this.handleImgClick.bind(this);
-    }
-    
-    handleImgClick(e, imgTxt){
-        e.preventDefault();
-        console.log("New view inside -- " + imgTxt);
-        this.props.onViewChange(imgTxt);
-    }
-
+    // Inline Swith statement
     render(){
-        return(
-            <div>
-                Will write about Us.....
+        return (
+            <div className="content-body">
+                <div className="container">
+                    {(() => {
+                        switch(this.props.view){
+                            case 'ABOUT':
+                                return(
+                                    <div>Write a nice paragraph on something about us.....</div>
+                                );
+                            case 'SERVICES':
+                                return(
+                                    <div>Write detailed information about services we provide.....</div>
+                                );
+                            default:
+                                return(
+                                    <div>Display a static page with our headquarters info and a Contact Us page...........</div>
+                                );
+                        }
+                    })()}            
+                </div>
             </div>
         )
     }

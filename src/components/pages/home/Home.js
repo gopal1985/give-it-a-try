@@ -20,6 +20,7 @@ class Home extends React.Component {
         this.setState({view: newView});
     }
 
+    // Switch statement as a function (recommended way)
     getView(contentView){
         switch(contentView){
             case 'SELLER':
@@ -27,11 +28,11 @@ class Home extends React.Component {
             case 'BUYER':
                 return <HomeContent view={this.state.view} onViewChange={this.handleViewChange}/>;
             case 'ABOUT':
-                return <StaticContent view={this.state.view} onViewChange={this.handleViewChange}/>;
+                return <StaticContent view={this.state.view}/>;
             case 'SERVICES':
-                return <StaticContent view={this.state.view} onViewChange={this.handleViewChange}/>;
+                return <StaticContent view={this.state.view}/>;
             case 'CONTACT':
-                return <StaticContent view={this.state.view} onViewChange={this.handleViewChange}/>;
+                return <StaticContent view={this.state.view}/>;
             default:
                 return <HomeContent view={this.state.view} onViewChange={this.handleViewChange}/>;
         }
@@ -43,7 +44,7 @@ class Home extends React.Component {
 
         return (
             <div>
-                <Header />
+                <Header onViewChange={this.handleViewChange}/>
                 <NavBar />
                 {contentView}     
                 <Footer onViewChange={this.handleViewChange}/>
