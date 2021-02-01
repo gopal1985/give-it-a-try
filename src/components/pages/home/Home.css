@@ -1,0 +1,20 @@
+.content-body {
+	padding: 30px;
+    overflow: hidden;
+}
+
+.home-first-column {
+    float: left;
+    width: 50%;
+    margin: 0px auto;
+}
+
+.home-second-column {
+    float: left;
+    width: 50%;
+    margin: 0px auto;
+}
+
+.img-text { 
+   text-align: center;
+}

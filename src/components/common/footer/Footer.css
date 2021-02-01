@@ -1,0 +1,36 @@
+.container{
+  width: 80%;
+  margin: 0 auto; /* Center the DIV horizontally */
+}
+
+.footer {
+    overflow: hidden;
+    background: #333;
+    color: white;
+    width: 99%;
+    bottom: 0px;
+    position: fixed;
+}
+  
+  /* Style the navigation bar links */
+.footer a {
+    float: left; /* Make sure that the links stay side-by-side */
+    display: block; /* Change the display to block, for responsive reasons (see below) */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 15px 150px; /* Add some padding */
+    text-decoration: none; /* Remove underline */
+}
+  
+  /* Right-aligned link */
+.footer a.right {
+    float: right; /* Float a link to the right */
+}
+  
+  /* Change color on hover/mouse-over */
+.footer a:hover {
+    background-color: #ddd; /* Grey background color */
+    color: black; /* Black text color */
+}
+
+
